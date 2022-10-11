@@ -55,12 +55,12 @@ env3 = Secret(
     secret='s3secret',
     key='BUCKET_NAME',
 )
-env4 = Secret(
-    deploy_type='env',
-    deploy_target='WB_KEY',
-    secret='wandb',
-    key='WB_KEY',
-)
+# env4 = Secret(
+#     deploy_type='env',
+#     deploy_target='WB_KEY',
+#     secret='wandb',
+#     key='WB_KEY',
+# )
 pod_resources = Resources()
 pod_resources.request_cpu = '1000m'
 pod_resources.request_memory = '2048Mi'
