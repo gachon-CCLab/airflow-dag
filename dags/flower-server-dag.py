@@ -78,7 +78,7 @@ port = k8s.V1ContainerPort(container_port=8080)
 
 run = KubernetesPodOperator(
     task_id="kubernetespodoperator",
-    namespace='fedops',
+    namespace='fedmlops',
     image='docker.io/hoo0681/airflowkubepodimage:0.1',
     #cmds=["python3"],
     #cmds=["/bin/sh","-c","apt-get install -y curl; until curl -fsl http://localhost:4191/ready; \
