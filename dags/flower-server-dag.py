@@ -92,7 +92,7 @@ run = KubernetesPodOperator(
         python3 -m pip install -r /app/requirements.txt; \
         python3 /app/app.py;"],
     ports=[port],
-    labels={'run':'fl-server-ccl'},
+    labels={'run':'fl-server'},
     env_vars={'REPO_URL':'https://github.com/gachon-CCLab/Flower_Server.git',
               "GIT_TAG":"master" ,
               "ENV": 'init' },
@@ -100,11 +100,11 @@ run = KubernetesPodOperator(
     #    env
     #],
     #image_pull_secrets=[k8s.V1LocalObjectReference('image_credential')],
-    name="fl-server-ccl",
+    name="fl-server",
     is_delete_operator_pod=True,
     get_logs=True,
     resources=pod_resources,
-    secrets=[env1,env2,env3,env4],
+    secrets=[env1,env2,env3],
     #env_from=configmaps,
     dag=dag,
 )
