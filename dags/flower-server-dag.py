@@ -20,7 +20,7 @@ task_default_args = {
     'email': ['tpah20@gmail.com'],
     'email_on_retry': False,
     'email_on_failure': False,
-    'execution_timeout': timedelta(hours=1)
+    'execution_timeout': timedelta(hours=6)
 }
 
 dag = DAG(
