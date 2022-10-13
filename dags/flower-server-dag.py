@@ -13,9 +13,9 @@ dag_id = 'flower-server-dag'
 
 task_default_args = {
     'owner': 'airflow',
-    'retries': 3,
-    'retry_delay': timedelta(minutes=10),
-    'start_date': datetime(2022, 10, 11),
+    'retries': 1,
+    'retry_delay': timedelta(hours=6),
+    'start_date': datetime(2022, 10, 13),
     'depends_on_past': False,
     'email': ['tpah20@gmail.com'],
     'email_on_retry': False,
