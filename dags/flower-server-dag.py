@@ -62,11 +62,11 @@ env3 = Secret(
 #     key='WB_KEY',
 # )
 pod_resources = Resources()
-pod_resources.request_cpu = '1000m'
+pod_resources.request_cpu = '3000m'
 pod_resources.request_memory = '2048Mi'
-pod_resources.limit_cpu = '2000m'
-pod_resources.limit_memory = '4096Mi'
-pod_resources.limit_gpu = '1'
+# pod_resources.limit_cpu = '2000m'
+# pod_resources.limit_memory = '4096Mi'
+# pod_resources.limit_gpu = '1'
 
 
 configmaps = [
