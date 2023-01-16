@@ -9,7 +9,7 @@ from airflow.providers.cncf.kubernetes.operators.kubernetes_pod import (
     KubernetesPodOperator,
 )
 
-dag_id = 'fl-android-server-dag"'
+dag_id = 'fl-android-server-dag'
 
 now = datetime.now()
 
@@ -27,7 +27,7 @@ task_default_args = {
 
 dag = DAG(
     dag_id=dag_id,
-    description='health kubernetes pod operator',
+    description='fl android server pod operator',
     default_args=task_default_args,
     schedule_interval='5 16 * * *',
     max_active_runs=1
