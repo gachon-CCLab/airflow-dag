@@ -95,7 +95,7 @@ run = KubernetesPodOperator(
         python3 /app/app.py;"],
     ports=[port],
     labels={'run':'fl-android-server'},
-    env_vars={'REPO_URL':'https://github.com/gachon-CCLab/flower-android-server.git',
+    env_vars={'REPO_URL':'https://github.com/gachon-CCLab/flower_android_server.git',
               "GIT_TAG":"master" ,
               "ENV": 'init' },
     #secrets=[
