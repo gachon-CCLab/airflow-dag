@@ -11,7 +11,7 @@ from airflow.providers.cncf.kubernetes.operators.kubernetes_pod import (
 
 dag_id = 'fl-android-server-dag"'
 
-now = datetime.datetime.now()
+now = datetime.now()
 
 task_default_args = {
     'owner': 'airflow',
