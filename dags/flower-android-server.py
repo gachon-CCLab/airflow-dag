@@ -9,7 +9,7 @@ from airflow.providers.cncf.kubernetes.operators.kubernetes_pod import (
     KubernetesPodOperator,
 )
 
-dag_id = 'flower-server-dag'
+dag_id = 'fl-android-server-dag"'
 
 now = datetime.datetime.now()
 
@@ -22,7 +22,7 @@ task_default_args = {
     'email': ['tpah20@gmail.com'],
     'email_on_retry': False,
     'email_on_failure': False,
-    'execution_timeout': timedelta(hours=6)
+    'execution_timeout': timedelta(hours=4)
 }
 
 dag = DAG(
@@ -64,7 +64,7 @@ env3 = Secret(
 #     key='WB_KEY',
 # )
 pod_resources = Resources()
-pod_resources.request_cpu = '3000m'
+pod_resources.request_cpu = '2000m'
 pod_resources.request_memory = '2048Mi'
 # pod_resources.limit_cpu = '2000m'
 # pod_resources.limit_memory = '4096Mi'
@@ -94,15 +94,15 @@ run = KubernetesPodOperator(
         python3 -m pip install -r /app/requirements.txt; \
         python3 /app/app.py;"],
     ports=[port],
-    labels={'run':'fl-server'},
-    env_vars={'REPO_URL':'https://github.com/gachon-CCLab/Flower_Server.git',
+    labels={'run':'fl-android-server"'},
+    env_vars={'REPO_URL':'https://github.com/gachon-CCLab/flower-android-server.git',
               "GIT_TAG":"master" ,
               "ENV": 'init' },
     #secrets=[
     #    env
     #],
     #image_pull_secrets=[k8s.V1LocalObjectReference('image_credential')],
-    name="fl-server",
+    name="fl-android-server",
     is_delete_operator_pod=True,
     get_logs=True,
     resources=pod_resources,
