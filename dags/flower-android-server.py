@@ -79,7 +79,7 @@ start = DummyOperator(task_id="start", dag=dag)
 port = k8s.V1ContainerPort(container_port=8080)
 
 run = KubernetesPodOperator(
-    task_id="kubernetespodoperator2",
+    task_id="kubernetespodoperator",
     namespace='fedmlops',
     image='docker.io/hoo0681/airflowkubepodimage:0.1',
     #cmds=["python3"],
