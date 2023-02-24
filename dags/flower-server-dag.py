@@ -9,7 +9,7 @@ from airflow.providers.cncf.kubernetes.operators.kubernetes_pod import (
     KubernetesPodOperator,
 )
 
-dag_id = 'flower-server-dag'
+dag_id = 'fl-fashion-mnist-dag'
 
 now = datetime.now()
 
