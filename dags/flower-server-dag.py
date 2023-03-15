@@ -15,7 +15,7 @@ now = datetime.now()
 
 task_default_args = {
     'owner': 'airflow',
-    'retries': 1,
+    'retries': 2,
     'retry_delay': timedelta(hours=6),
     'start_date': datetime(now.year, now.month, now.day),
     'depends_on_past': False,
